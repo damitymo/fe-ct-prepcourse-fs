@@ -23,13 +23,15 @@ function incrementarPorUno(array) {
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
      
-   };
+   }
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+   array.push(elemento);
+   return array;
 }
 
 function agregarItemAlComienzoDelArray(array, elemento) {
