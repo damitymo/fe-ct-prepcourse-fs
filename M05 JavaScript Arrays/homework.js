@@ -22,7 +22,15 @@ function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
+<<<<<<< HEAD
      
+=======
+     var array2=[];
+     for (let i =0; i<array.length;i++){
+      array2.push(array[i]+1);
+     }
+     return array2;
+>>>>>>> 5c3e069da5728a3783220783b9386b97d1d6224b
    }
 
 
