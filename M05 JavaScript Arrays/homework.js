@@ -46,47 +46,84 @@ function agregarItemAlComienzoDelArray(array, elemento) {
    array.unshift(elemento);
    return array;
 }
-array.unshift(elemento);
-return array;
 function dePalabrasAFrase(palabras) {
    // El argumento "palabras" es un arreglo de strings.
    // Retornar un string donde todas las palabras estén concatenadas
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
+   var arrayNuevo=palabras.join (" ");
+   return arrayNuevo;
 }
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
+   var arrayincluye=array.includes(elemento);
+   return arrayincluye;
 }
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+   var resultadoSuma=0;
+   for (var i=0; i<=arrayOfNums.length-1;i++){
+      resultadoSuma+=arrayOfNums[i];
+   }
+   return resultadoSuma;
+
 }
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   var cont=0;
+   var sumatoria=0;
+   var promedio=0;
+   for (var i=0;i<=resultadosTest.length-1;i++){
+      cont++;
+      sumatoria+=resultadosTest[i];
+   }
+   promedio=sumatoria/cont;
+   return promedio;
 }
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
+   var numGrande=0;
+   for (var i=0; i<arrayOfNums.length-1;i++){
+         if (arrayOfNums[i]>numGrande){
+            numGrande=arrayOfNums[i];
+         }
+   }
+   return numGrande;
 }
+
 
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   var arrayProducto=0;
+   if (arguments.length===0){
+      return 0;
+   }
+   else if (arguments.length===1){
+      return arguments[0];
+   }
+   else{
+   for (var i=0; i<=arguments.length-1;i++){
+      arrayProducto*=arguments[i];
+   }
+   return arrayProducto;
 }
-
+}
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
