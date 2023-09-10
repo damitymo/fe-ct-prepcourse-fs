@@ -110,49 +110,84 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-   var arrayProducto=0;
-   if (arguments.length===0){
+   
+   if(arguments.length === 0){
       return 0;
-   }
-   else if (arguments.length===1){
+   }if(arguments.length === 1){
       return arguments[0];
+   }else{
+      var multiplicacion = 1;
+   for(let i = 0; i < arguments.length; i++){
+      multiplicacion *= arguments[i];
    }
-   else{
-   for (var i=0; i<=arguments.length-1;i++){
-      arrayProducto*=arguments[i];
-   }
-   return arrayProducto;
 }
+   return multiplicacion;
 }
+
+
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
-}
+   var cuento=0;
+   for (let i=0;i<array.length;i++){
+      if (array[i]>18){
+         cuento++;
+      }
+   }
+   return cuento;
+   }
 
 function diaDeLaSemana(numeroDeDia) {
    // Supongamos que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
+   if (numeroDeDia===1||numeroDeDia===2||numeroDeDia===3||numeroDeDia===4||numeroDeDia===5) {
+      return "Es dia laboral";
+   }
+   else{
+      return "Es fin de semana";
+   }
 }
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
+   var numNuevo=num.toString();
+   if (numNuevo[0]===9){
+      return true;
+   }
+   else{
+      return false;
+   }
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
+   var bandera=0;
+   for (i=0;i<array.length;i++){
+      for (j=1;j<array.length;j++){
+         if(array[i]!==array[j]){
+            bandera===1;
+         }
+   }
 }
-
+if (bandera===0){
+   return true;
+}
+else{
+   return false;
+}
+}
 function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+   
 }
 
 function tablaDelSeis() {
