@@ -142,7 +142,7 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
-   if (numeroDeDia===1||numeroDeDia===2||numeroDeDia===3||numeroDeDia===4||numeroDeDia===5) {
+   if (numeroDeDia===2||numeroDeDia===3||numeroDeDia===4||numeroDeDia===5||numeroDeDia===6) {
       return "Es dia laboral";
    }
    else{
@@ -155,7 +155,7 @@ function empiezaConNueve(num) {
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
    var numNuevo=num.toString();
-   if (numNuevo[0]===9){
+   if (numNuevo[0]==="9"){
       return true;
    }
    else{
@@ -167,20 +167,15 @@ function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
-   var bandera=0;
+ 
    for (i=0;i<array.length;i++){
       for (j=1;j<array.length;j++){
          if(array[i]!==array[j]){
-            bandera===1;
+            return false;
          }
    }
 }
-if (bandera===0){
-   return true;
-}
-else{
-   return false;
-}
+return true;
 }
 function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
@@ -188,18 +183,24 @@ function mesesDelAño(array) {
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
    var arrayMeses=[];
-   if (array.includes==="Enero"&&array.includes==="Marzo"&&array.includes==="Noviembre"){
-      arrayMeses[0]==="Enero";
-      arrayMeses[1]==="Marzo";
-      arrayMeses[2]==="Noviembre";
-      return arrayMeses;
+   for (let i=0;i<array.length;i++){
+   if (array[i]==="Enero"){
+     arrayMeses.push("Enero");      
    }
-   else{
-      return "No se encontraron los meses pedidos";
+   else if(array[i]==="Marzo"){
+      arrayMeses.push("Marzo");  
    }
-
+   else if(array[i]==="Noviembre"){
+      arrayMeses.push("Noviembre");  
+   }
 }
-
+if (arrayMeses.length===3){
+   return arrayMeses;
+}
+else{
+   return "No se encontraron los meses pedidos";
+}
+}
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
@@ -235,8 +236,23 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-   
-}
+   var bandera=0;
+   var numAumentado=[];
+   for (let i=0;i<10;i++){
+      num+=2
+      numAumentado.push(num);
+      if (num===i){
+         bandera=1;
+         break;
+      }
+      }
+      if (bandera===1){
+         return "Se interrumpió la ejecución";
+      }
+      else{
+         return numAumentado;
+      }
+   }
 
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
@@ -245,7 +261,22 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
-}
+ 
+   var numAumentado1=[];
+   for (let i=0;i<10;i++){
+      
+      if (i!==4){
+         num+=2
+         numAumentado1.push(num);
+         
+      }
+      else{
+         continue;
+      }
+   }
+      return numAumentado1;
+      }
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
