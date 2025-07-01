@@ -3,19 +3,18 @@
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
-   return array[0];
+   
 }
 
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
-   return array[array.length-1];
-}
+ }  
 
 function obtenerLargoDelArray(array) {
    // Retornar la longitud del arreglo recibido por parámetro.
    // Tu código:
-   return array.length;
+   
 }
 
 function incrementarPorUno(array) {
@@ -23,11 +22,7 @@ function incrementarPorUno(array) {
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
      
-     var array2=[];
-     for (let i =0; i<array.length;i++){
-      array2.push(array[i]+1);
-     }
-     return array2;
+   
    }
 
 
@@ -35,16 +30,14 @@ function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
-   array.push(elemento);
-   return array;
+   
 }
 
 function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
-   array.unshift(elemento);
-   return array;
+   
 }
 function dePalabrasAFrase(palabras) {
    // El argumento "palabras" es un arreglo de strings.
@@ -52,27 +45,21 @@ function dePalabrasAFrase(palabras) {
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
-   var arrayNuevo=palabras.join (" ");
-   return arrayNuevo;
+   
 }
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
-   var arrayincluye=array.includes(elemento);
-   return arrayincluye;
+   
 }
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
-   var resultadoSuma=0;
-   for (var i=0; i<=arrayOfNums.length-1;i++){
-      resultadoSuma+=arrayOfNums[i];
-   }
-   return resultadoSuma;
+   
 
 }
 
